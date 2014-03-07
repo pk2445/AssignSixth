@@ -16,6 +16,10 @@
 		
 		var googleDataSource = new google.visualization.DataTable();
 		
+		/*The follwoing are goign to be my first and second elements of hrader of the chart as 0 represetns date and 1 represents value.
+		 * 
+		 */
+		
 		googleDataSource.addColumn('string'), mnewJobData.columns[0];
 		googleDataSource.addColumn('number'), mnewJobData.columns[1];
 		googleDataSource.addRows(mnewJobData.rows);
@@ -55,11 +59,12 @@
 	 */
 	
 	/* Now I am loading the get function, a function that will take the data that we load in the json file. I am also introducting 
-	 * a new callback called latestData and "json" as my another parameter
+	 * a new callback called latestData and "json" as my another parameter. 
 	 */
 	
 	
-	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1Au1IPB-eyi1a6DhXaNJVJGNJEXtbAdZDSWU1TIQk&key=AIzaSyDKXOjTWWXFQlzg_fSmdUNjpsaj-RM0ofA", latestData, "json");
+	
+	$.get("https://www.googleapis.com/fusiontables/v1/query?sql=SELECT+*+FROM+1Au1IPB-eyi1a6DhXaNJVJGNJEXtbAdZDSWU1TIQk+WHERE+DATE>='2000-01-01'&key=AIzaSyDKXOjTWWXFQlzg_fSmdUNjpsaj-RM0ofA", latestData, "json");
 	
 	}
 	
