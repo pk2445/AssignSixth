@@ -28,7 +28,7 @@
 		 * 
 		 */
 		
-		var option = {title: "Worsening Unempyment"
+		var option = {title: "Worsening Unempyment, few options on the table"
 		};
 		
 		
@@ -59,7 +59,8 @@
 	 */
 	
 	/* Now I am loading the get function, a function that will take the data that we load in the json file. I am also introducting 
-	 * a new callback called latestData and "json" as my another parameter. 
+	 * a new callback called latestData and "json" as my another parameter. Though we had an employment data starting from 1948, we 
+	 * used the WHERE+DATA>= to tell the computer that I my have data only after 2000 in my chart.
 	 */
 	
 	
